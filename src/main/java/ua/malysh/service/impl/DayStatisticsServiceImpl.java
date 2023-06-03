@@ -1,4 +1,4 @@
-package ua.malysh.service;
+package ua.malysh.service.impl;
 
 import java.time.LocalDate;
 
@@ -6,10 +6,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.RequiredArgsConstructor;
+import ua.malysh.domain.ConsumedNutritions;
 import ua.malysh.domain.DayStatistics;
 import ua.malysh.dto.ProductDTO;
 import ua.malysh.dto.RecipeDTO;
 import ua.malysh.repository.DayStatisticsRepository;
+import ua.malysh.service.DayStatisticsService;
 
 @Service
 @Transactional
