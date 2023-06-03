@@ -2,6 +2,7 @@ package ua.malysh.domain;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -21,8 +22,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "day_statistics")
-@Getter
-@Setter
+@Getter @Setter
 @NoArgsConstructor
 public class DayStatistics {
 
@@ -46,11 +46,11 @@ public class DayStatistics {
 
     @Column(name = "created_at")
     @CreationTimestamp
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
 
     @Column(name = "modified_at")
     @UpdateTimestamp
-    private LocalDateTime modifiedAt;
+    private LocalDate modifiedAt;
 
     @Override
     public boolean equals(Object o) {
